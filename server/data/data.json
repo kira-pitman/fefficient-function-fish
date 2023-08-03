@@ -1,53 +1,63 @@
 {
-  "puppies": [
+  "fishing-trips": [
     {
       "id": 1,
-      "name": "Fido",
-      "owner": "Fred",
-      "image": "/images/puppy1.jpg",
-      "breed": "Labrador"
+      "date": "2023-08-03",
+      "location": "Black Rocks",
+      "image": "insert-source-here",
+      "vibes": "top notch",
+      "fish":[
+        {
+          "species": "snapper",
+          "length": 40,
+          "bait": "mullet"
+        },
+        {
+          "species": "snapper",
+          "length": 44,
+          "bait": "mullet"
+        },
+        {
+          "species": "snapper",
+          "length": 50,
+          "bait": "mullet"
+        },
+        {
+          "species": "kahawai",
+          "length": 60,
+          "bait": "mullet"
+        },
+        {
+          "species": "kahawai",
+          "length": 50,
+          "bait": "mullet"
+        }
+      ]
     },
     {
       "id": 2,
-      "name": "Coco",
-      "owner": "Chloe",
-      "image": "/images/puppy2.jpg",
-      "breed": "Labrador"
-    },
-    {
-      "id": 3,
-      "name": "Magnum",
-      "owner": "Michael",
-      "image": "/images/puppy3.jpg",
-      "breed": "Rottweiler"
-    },
-    {
-      "id": 4,
-      "name": "Sadie",
-      "owner": "Sam",
-      "image": "/images/puppy4.jpg",
-      "breed": "Labrador"
-    },
-    {
-      "id": 5,
-      "name": "Murphy",
-      "owner": "Matthew",
-      "image": "/images/puppy5.jpg",
-      "breed": "Pug"
-    },
-    {
-      "id": 6,
-      "name": "Bella",
-      "owner": "Brianna",
-      "image": "/images/puppy6.jpg",
-      "breed": "Labrador"
-    },
-    {
-      "id": 7,
-      "name": "Rocky",
-      "owner": "Ricky",
-      "image": "/images/puppy7.jpg",
-      "breed": "Labrador"
+      "date": "2023-08-01",
+      "location": "Spirits Bay",
+      "image": "insert-source-here",
+      "vibes": "meh",
+      "fish":[
+        {
+          "species": "snapper",
+          "length": 40,
+          "bait": "bonito"
+        },
+        {
+          "species": "trevally",
+          "length": 44,
+          "bait": "bonito"
+        },
+        {
+          "species": "snapper",
+          "length": 31,
+          "bait": "bonito"
+        }
+      ]
     }
+
   ]
 }
