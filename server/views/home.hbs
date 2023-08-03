@@ -1,7 +1,10 @@
 <div class="container">
-  {{#each puppies}}
-  <div class="puppy-list">
-    <a href="/puppies/{{id}}"><img class="img-circle" src="{{image}}" alt="{{name}}"></a>
+  {{#each fishing-trip}}
+  <div>
+    <a href="/fishing-trip{{id}}">Fishing trip {{id}}</a>
+    <img src="{{image}}" alt="Fishing trip {{name}}">
+    <div>{{date}}</div>
+    <div>Number of fish: {{fish.length}}</div>
   </div>
   {{/each}}
 </div>
