@@ -12,3 +12,5 @@ export async function getFishingTrips() {
     console.error("Sorry we can't load your fishing diary today :(")
   }
 }
+
+// async function of get details
