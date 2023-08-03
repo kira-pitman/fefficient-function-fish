@@ -1,9 +1,9 @@
 import * as Path from 'node:path'
-// import * as URL from 'node:url'
-
+import fs from 'node:fs/promises'
 import express from 'express'
 import hbs from 'express-handlebars'
 
+import { getFishingTrips } from './lib.js'
 
 const server = express()
 
@@ -18,5 +18,9 @@ server.set('view engine', 'hbs')
 server.set('views', Path.resolve('server/views'))
 
 // Your routes/router(s) should go here
+server.get('/', async (req, res) => {
+  const fishingTrips = await getFishingTrips()
+  res.render('home', fishingTrips)
+})
 
 export default server

@@ -1,9 +1,9 @@
 <div class="container">
-  {{#each fishing-trip}}
-  <div>
+  {{#each fishingTrips}}
+  <div class="fishingTrip">
+    <div><img class="fishingTripImage" src="{{image}}" alt="Fishing trip {{name}}"/></div>
     <a href="/fishing-trip{{id}}">Fishing trip {{id}}</a>
-    <img src="{{image}}" alt="Fishing trip {{name}}">
-    <div>{{date}}</div>
+    <div>Date: {{date}}</div>
     <div>Number of fish: {{fish.length}}</div>
   </div>
   {{/each}}

@@ -1,9 +1,13 @@
 body {
-  background-color: #FFCCCC;
+  background-color: rgb(157, 213, 248);
   font-family: 'Spirax', cursive;
+  background-image: url('./images/Fishing-background-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -14,14 +18,14 @@ body {
   flex-direction: column;
 }
 
-.puppy-list {
+.fish-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px;
 }
 
-.puppy {
+.fish {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +33,7 @@ body {
 }
 
 .img-circle {
-  border-radius: 50%;
+  border-radius: 10%;
   object-fit: cover;
   width: 230px;
   height: 230px;
@@ -49,4 +53,12 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+}
+
+.fishingTrip {
+  margin: 20px;
+}
+
+.fishingTripImage {
+  height: 100px;
 }
