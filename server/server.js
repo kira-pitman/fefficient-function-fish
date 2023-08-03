@@ -4,6 +4,7 @@ import express from 'express'
 import hbs from 'express-handlebars'
 
 import { getFishingTrips } from './lib.js'
+import { router } from './route.js'
 
 const server = express()
 
@@ -22,5 +23,7 @@ server.get('/', async (req, res) => {
   const fishingTrips = await getFishingTrips()
   res.render('home', fishingTrips)
 })
+
+server.use('/fishing-trip', router)
 
 export default server
