@@ -4,13 +4,18 @@
   <div>Date: {{date}}</div>
   <div>Location: {{location}}</div>
   <div>Weather: {{weather}}</div>
+  <div>Vibes: {{vibes}}</div>
  <div class="container">
   <h3>Fish: </h3>
+  <ul>
   {{#each fish}}
-      <div>Species: {{species}}</div>
-      <div>Length: {{length}}</div>
-      <div>Bait: {{bait}}</div>
+    <li>
+        <div>Species: {{species}}</div>
+        <div>Length: {{length}}</div>
+        <div>Bait: {{bait}}</div>
+      </li>
   {{/each}}
+  </ul>
 </div>
   <a href="/edit">Edit</a>
 </div>
