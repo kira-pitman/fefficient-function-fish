@@ -6,6 +6,43 @@ import server from '../server/server.js'
 import { getFishingTrips } from '../server/lib.js'
 import { render } from './test-utils.js'
 
+vi.mock('node:fs/promises')
+
+beforeAll(() => {
+  vi.mocked(fs.readFile).mockResolvedValue(
+    JSON.stringify({
+      fishingTrips: [
+        {
+          id: 1,
+          date: '2023-08-01',
+          location: 'Spirits Bay',
+          image:
+            'https://img.freepik.com/free-vector/happy-kid-sitting-chair-fishing_1308-121424.jpg?w=2000',
+          weather: 'overcast',
+          vibes: 'meh',
+          fish: [
+            {
+              species: 'snapper',
+              length: 40,
+              bait: 'bonito',
+            },
+            {
+              species: 'trevally',
+              length: 44,
+              bait: 'bonito',
+            },
+            {
+              species: 'snapper',
+              length: 31,
+              bait: 'bonito',
+            },
+          ],
+        },
+      ],
+    })
+  )
+})
+
 describe('Get /fishing-trip/1', async () => {
   test('shows fishing trip image', async () => {
     const res = await request(server).get('/fishing-trip/1')
@@ -47,7 +84,7 @@ describe('Get /fishing-trip/1', async () => {
           
               
           <div>
-            Bait: mullet
+            Bait: bonito
           </div>
           
             
@@ -60,7 +97,7 @@ describe('Get /fishing-trip/1', async () => {
           
               
           <div>
-            Species: snapper
+            Species: trevally
           </div>
           
               
@@ -70,7 +107,7 @@ describe('Get /fishing-trip/1', async () => {
           
               
           <div>
-            Bait: mullet
+            Bait: bonito
           </div>
           
             
@@ -88,58 +125,12 @@ describe('Get /fishing-trip/1', async () => {
           
               
           <div>
-            Length: 50
+            Length: 31
           </div>
           
               
           <div>
-            Bait: mullet
-          </div>
-          
-            
-        </li>
-        
-          
-        <li
-          role="fishListli"
-        >
-          
-              
-          <div>
-            Species: kahawai
-          </div>
-          
-              
-          <div>
-            Length: 60
-          </div>
-          
-              
-          <div>
-            Bait: mullet
-          </div>
-          
-            
-        </li>
-        
-          
-        <li
-          role="fishListli"
-        >
-          
-              
-          <div>
-            Species: kahawai
-          </div>
-          
-              
-          <div>
-            Length: 50
-          </div>
-          
-              
-          <div>
-            Bait: mullet
+            Bait: bonito
           </div>
           
             
@@ -156,7 +147,7 @@ describe('Get /fishing-trip/1', async () => {
     const date = screen.getByText(/Date:/)
     expect(date).toMatchInlineSnapshot(`
       <div>
-        Date: 2023-08-03
+        Date: 2023-08-01
       </div>
     `)
   })
@@ -167,18 +158,18 @@ describe('Get /fishing-trip/1', async () => {
     const location = screen.getByText(/Location:/)
     expect(location).toMatchInlineSnapshot(`
       <div>
-        Location: Black Rocks
+        Location: Spirits Bay
       </div>
     `)
   })
-  test('shows location', async () => {
+  test('shows vibes', async () => {
     const res = await request(server).get('/fishing-trip/1')
     const screen = render(res)
 
     const vibes = screen.getByText(/Vibes:/)
     expect(vibes).toMatchInlineSnapshot(`
       <div>
-        Vibes: top notch
+        Vibes: meh
       </div>
     `)
   })
