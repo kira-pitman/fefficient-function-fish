@@ -6,6 +6,7 @@
       "location": "Black Rocks",
       "image": "insert-source-here",
       "vibes": "top notch",
+      "weather": "clear",
       "fish":[
         {
           "species": "snapper",
@@ -40,6 +41,7 @@
       "location": "Spirits Bay",
       "image": "insert-source-here",
       "vibes": "meh",
+      "weather": "overcast",
       "fish":[
         {
           "species": "snapper",
