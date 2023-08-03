@@ -1,6 +1,9 @@
 body {
   background-color: #ffcccc;
   font-family: 'Spirax', cursive;
+  background-image: url('./images/Fishing-background-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -14,14 +17,14 @@ body {
   flex-direction: column;
 }
 
-.puppy-list {
+.fish-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 50px;
 }
 
-.puppy {
+.fish {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,7 +32,7 @@ body {
 }
 
 .img-circle {
-  border-radius: 50%;
+  border-radius: 10%;
   object-fit: cover;
   width: 230px;
   height: 230px;
