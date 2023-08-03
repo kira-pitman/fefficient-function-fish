@@ -5,6 +5,10 @@ import fs from 'node:fs/promises'
 
 export const router = express.Router()
 
+router.get('/new'), async (req, res) => {
+  res.render('new')
+}
+
 router.get('/:id', async (req, res) => {
   try {
     let id = req.params.id
