@@ -1,7 +1,16 @@
-<div class="puppy">
-  <img class="img-circle" src="{{image}}" alt="{{name}}">
-  <h2>{{name}}</h2>
-  <div>Breed: {{breed}}</div>
-  <div>Owner: {{owner}}</div>
-  <a href="/puppies/{{id}}/edit">Edit</a>
+<div>
+  <h2>Fishing trip {{id}}</h2>
+  <img src="{{image}}" alt="Fishing trip {{id}}">
+  <div>Date: {{date}}</div>
+  <div>Location: {{location}}</div>
+  <div>Weather: {{weather}}</div>
+ <div class="container">
+  <h3>Fish: </h3>
+  {{#each fish}}
+      <div>Species: {{species}}</div>
+      <div>Length: {{length}}</div>
+      <div>Bait: {{bait}}</div>
+  {{/each}}
+</div>
+  <a href="/edit">Edit</a>
 </div>
