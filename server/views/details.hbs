@@ -1,12 +1,12 @@
-<div>
-  <h2>Fishing trip {{id}}</h2>
-  <img src="{{image}}" alt="Fishing trip {{id}}">
+<div class="tripSummary">
   <div>Date: {{date}}</div>
+  <h2>Fishing trip {{id}}</h2>
+  <img class="fishingTripImage" src="{{image}}" alt="Fishing trip {{id}}">
   <div>Location: {{location}}</div>
   <div>Weather: {{weather}}</div>
   <div>Vibes: {{vibes}}</div>
- <div class="container">
-  <h3>Fish: </h3>
+ <div class="fishList">
+  <h3>Fish caught: </h3>
   <ul>
   {{#each fish}}
     <li>
