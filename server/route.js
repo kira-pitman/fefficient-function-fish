@@ -31,7 +31,7 @@ router.post('/new', async (req, res) => {
     console.error(err.message)
   }
 
-  res.redirect(`${newTrip.id}`)
+  res.redirect(`/fishing-trip/${newTrip.id}`)
 })
 
 router.get('/:id', async (req, res) => {
