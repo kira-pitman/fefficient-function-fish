@@ -1,9 +1,9 @@
 body {
-  background-color: #ffcccc;
-  font-family: 'Spirax', cursive;
+  background-color: rgb(157, 213, 248);
 }
 
 .container {
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -49,6 +49,10 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Roboto', sans-serif;
+}
+
+.fishingTrip {
+  margin: 20px;
 }
 
 .fishingTripImage {
