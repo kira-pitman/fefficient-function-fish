@@ -1,21 +1,40 @@
-<form class="form" action="/fishingTrip{{id}}/edit" method="post">
-  <img class="fishingTripImage" src="{{image}}" alt="Fishing trip{{id}}">
+<form class="form" action="/fishing-trip/new" method="post">
+<label for="image" class="form-item">
+  <label for="date" class="form-item">
+    Date: 
+    <input type="text" name="date" value="{{date}}" required>
+  </label>
+  
   <label for="location" class="form-item">
-    Name:
-    <input type="text" name="name" value="{{name}}">
+    Location:
+    <input type="text" name="location" value="{{location}}" required>
   </label>
   
-  <label for="breed" class="form-item">
-    Breed:
-    <input type="text" name="breed" value="{{breed}}">
+  <label for="weather" class="form-item">
+    Weather:
+    <input type="text" name="weather" value="{{weather}}" required>
   </label>
-  
-  <label for="owner" class="form-item">
-    Owner:
-    <input type="text" name="owner" value="{{owner}}">
+
+   <label for="vibes" class="form-item">
+    Vibes:
+    <input type="text" name="vibes" value="{{vibes}}" required>
   </label>
-  
-  <input type="hidden" name="image" value="{{image}}">
+
+<label for="species" class="form-item">
+    Species:
+    <input type="text" name="species" value="{{species}}" required>
+  </label>
+
+  <label for="length" class="form-item">
+    Length:
+    <input type="text" name="length" value="{{length}}" required>
+  </label>
+
+  <label for="bait" class="form-item">
+    Bait:
+    <input type="text" name="bait" value="{{bait}}" required>
+  </label>
   
   <input type="submit" name="" value="Submit">
 </form>
+

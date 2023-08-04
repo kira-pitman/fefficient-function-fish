@@ -54,8 +54,6 @@ router.get('/:id', async (req, res) => {
     const trips = await getFishingTrips()
     let trip = trips.fishingTrips.find((element) => element.id == id)
 
-    console.log(trip)
-
     res.render('details', trip)
   } catch (err) {
     console.error(err.message)

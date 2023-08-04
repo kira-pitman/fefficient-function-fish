@@ -59,6 +59,21 @@
           "bait": "bonito"
         }
       ]
+    },
+    {
+      "id": 3,
+      "date": "20-06-2023",
+      "location": "Nowhere",
+      "vibes": "mid",
+      "weather": "bad",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/766/articles/2016/03/shutterstock-364777841-1509114241.jpg",
+      "fish": [
+        {
+          "species": "snapper",
+          "length": "52",
+          "bait": "mullet"
+        }
+      ]
     }
   ]
 }
