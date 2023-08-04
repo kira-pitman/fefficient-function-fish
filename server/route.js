@@ -49,9 +49,7 @@ router.post('/new', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     let id = req.params.id
-    const trips = await fs
-      .readFile(Path.resolve('server/data/data.json'), 'utf-8')
-      .then((data) => JSON.parse(data))
+    const trips = await getFishingTrips()
     let trip = trips.fishingTrips.find((element) => element.id == id)
 
     console.log(trip)
