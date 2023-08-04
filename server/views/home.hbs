@@ -2,9 +2,9 @@
   {{#each fishingTrips}}
   <div class="fishingTrip">
     <div><img class="fishingTripImage" src="{{image}}" alt="Fishing trip {{id}}"/></div>
-    <a href="/fishing-trip/{{id}}">Fishing trip {{id}}</a>
-    <div>Date: {{date}}</div>
-    <div>Number of fish: {{fish.length}}</div>
+    <div class="summary-text"><a  href="/fishing-trip/{{id}}">Fishing trip {{id}}</a></div> 
+    <div class="summary-text">Date: {{date}}</div>
+    <div class="summary-text">Number of fish: {{fish.length}}</div>
   </div>
   {{/each}}
 </div>
