@@ -1,6 +1,9 @@
 body {
   background-color: rgb(157, 213, 248);
-  font-family: 'Spirax', cursive;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
   background-image: url('./images/Fishing-background-1.jpg');
   background-size: cover;
   background-repeat: no-repeat;
