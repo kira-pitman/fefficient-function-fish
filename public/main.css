@@ -1,10 +1,10 @@
-body {
+/* body {
   background-color: rgb(157, 213, 248);
   font-family: 'Roboto', sans-serif;
   position: relative;
-}
+} */
 
-body::before {
+.background-image {
   content: '';
   position: absolute;
   top: 0;
