@@ -100,12 +100,16 @@ describe('Get /', async () => {
     const date1 = screen.getByText('Date: 2023-08-01')
     const date2 = screen.getByText('Date: 2023-08-03')
     expect(date1).toMatchInlineSnapshot(`
-      <div>
+      <div
+        class="summary-text"
+      >
         Date: 2023-08-01
       </div>
     `)
     expect(date2).toMatchInlineSnapshot(`
-      <div>
+      <div
+        class="summary-text"
+      >
         Date: 2023-08-03
       </div>
     `)
@@ -116,12 +120,16 @@ describe('Get /', async () => {
     const numberOfFish1 = screen.getByText('Number of fish: 3')
     const numberOfFish2 = screen.getByText('Number of fish: 4')
     expect(numberOfFish1).toMatchInlineSnapshot(`
-      <div>
+      <div
+        class="summary-text"
+      >
         Number of fish: 3
       </div>
     `)
     expect(numberOfFish2).toMatchInlineSnapshot(`
-      <div>
+      <div
+        class="summary-text"
+      >
         Number of fish: 4
       </div>
     `)
