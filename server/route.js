@@ -23,6 +23,8 @@ router.post('/new', async (req, res) => {
     location: req.body.location,
     vibes: req.body.vibes,
     weather: req.body.weather,
+    image:
+      'https://hips.hearstapps.com/hmg-prod/images/766/articles/2016/03/shutterstock-364777841-1509114241.jpg',
     fish: [
       {
         species: req.body.species,

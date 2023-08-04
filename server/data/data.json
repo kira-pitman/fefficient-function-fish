@@ -59,20 +59,6 @@
           "bait": "bonito"
         }
       ]
-    },
-    {
-      "id": 3,
-      "date": "08",
-      "location": "23432",
-      "vibes": "324",
-      "weather": "324",
-      "fish": [
-        {
-          "species": "324",
-          "length": "34",
-          "bait": ""
-        }
-      ]
     }
   ]
 }
