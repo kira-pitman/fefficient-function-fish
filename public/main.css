@@ -107,3 +107,7 @@ body {
 .title {
   padding-top: 10px;
 }
+
+.summary-text {
+  text-align-last: center;
+}
