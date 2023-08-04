@@ -15,9 +15,21 @@ router.post('/new', async (req, res) => {
   const trips = await getFishingTrips()
 
   const id = trips.fishingTrips.length + 1
+
   const newTrip = {
     id,
-    ...req.body,
+    // now need to be more specific about request body to get array properly
+    date: req.body.date,
+    location: req.body.location,
+    vibes: req.body.vibes,
+    weather: req.body.weather,
+    fish: [
+      {
+        species: req.body.species,
+        length: req.body.length,
+        bait: req.body.bait,
+      },
+    ],
   }
 
   trips.fishingTrips.push(newTrip)
@@ -41,6 +53,9 @@ router.get('/:id', async (req, res) => {
       .readFile(Path.resolve('server/data/data.json'), 'utf-8')
       .then((data) => JSON.parse(data))
     let trip = trips.fishingTrips.find((element) => element.id == id)
+
+    console.log(trip)
+
     res.render('details', trip)
   } catch (err) {
     console.error(err.message)
