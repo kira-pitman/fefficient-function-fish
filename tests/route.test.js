@@ -68,9 +68,7 @@ describe('Get /fishing-trip/1', async () => {
       >
         
           
-        <li
-          role="fishListli"
-        >
+        <li>
           
               
           <div>
@@ -91,9 +89,7 @@ describe('Get /fishing-trip/1', async () => {
         </li>
         
           
-        <li
-          role="fishListli"
-        >
+        <li>
           
               
           <div>
@@ -114,9 +110,7 @@ describe('Get /fishing-trip/1', async () => {
         </li>
         
           
-        <li
-          role="fishListli"
-        >
+        <li>
           
               
           <div>
