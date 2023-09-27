@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pupparazzi
 
 Learning objectives:
@@ -127,3 +128,7 @@ When complete, your application might look like this:
 
 ---
 [Provide feedback on this repo](https://docs.google.com/forms/d/e/1FAIpQLSfw4FGdWkLwMLlUaNQ8FtP2CTJdGDUv6Xoxrh19zIrJSkvT4Q/viewform?usp=pp_url&entry.1958421517=pupparazzi)
+=======
+# fefficient-function-fish
+First group project from Dev Academy Aotearoa bootcamp
+>>>>>>> 2971c52036bf60d7cf1e7fbd81ade1fbffa724c8
