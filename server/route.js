@@ -12,9 +12,20 @@ router.get('/new', (req, res) => {
 })
 
 router.post('/new', async (req, res) => {
+  console.log(req.body)
+
   const trips = await getFishingTrips()
 
   const id = trips.fishingTrips.length + 1
+
+  const catches = [  ]
+  for (let i = 0; i < req.body.species.length; i++) {
+    catches.push({
+      species: req.body.species[i],
+      length: req.body.length[i],
+      bait: req.body.bait[i],
+    })
+  }
 
   const newTrip = {
     id,
@@ -23,13 +34,9 @@ router.post('/new', async (req, res) => {
     location: req.body.location,
     vibes: req.body.vibes,
     weather: req.body.weather,
-    fish: [
-      {
-        species: req.body.species,
-        length: req.body.length,
-        bait: req.body.bait,
-      },
-    ],
+    image:
+      'https://hips.hearstapps.com/hmg-prod/images/766/articles/2016/03/shutterstock-364777841-1509114241.jpg',
+    fish: catches
   }
 
   trips.fishingTrips.push(newTrip)
@@ -51,8 +58,6 @@ router.get('/:id', async (req, res) => {
     let id = req.params.id
     const trips = await getFishingTrips()
     let trip = trips.fishingTrips.find((element) => element.id == id)
-
-    console.log(trip)
 
     res.render('details', trip)
   } catch (err) {

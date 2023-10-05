@@ -1,3 +1,4 @@
+<div class="background-image"></div>
 <div class="tripSummary">
   <div>Date: {{date}}</div>
   <h2>Fishing trip {{id}}</h2>
@@ -5,9 +6,9 @@
   <div>Location: {{location}}</div>
   <div>Weather: {{weather}}</div>
   <div>Vibes: {{vibes}}</div>
- <div class="fishList">
-  <h3>Fish caught: </h3>
-  <ul role="fishList">
+ <div>
+  <h3 id="fishList">Fish:</h3>
+  <ul aria-describedby="fishList">
   {{#each fish}}
     <li>
         <div>Species: {{species}}</div>
@@ -17,5 +18,5 @@
   {{/each}}
   </ul>
 </div>
-  <a href="/edit">Edit</a>
+  {{!-- <a href="/fishing-trip/{{id}}/edit">Edit</a> --}}
 </div>

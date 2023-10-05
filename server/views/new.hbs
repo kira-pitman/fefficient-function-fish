@@ -1,42 +1,107 @@
+<div class="background-image"></div>
 <form class="form" action="/fishing-trip/new" method="post">
-  <img class="img-circle" src="{{image}}" alt="{{name}}">
+<label for="image" class="form-item">
   <label for="date" class="form-item">
     Date: 
-    <input type="text" name="date" value="{{date}}">
+    <input type="text" name="date" required>
   </label>
   
   <label for="location" class="form-item">
     Location:
-    <input type="text" name="location" value="{{location}}">
+    <input type="text" name="location"required>
   </label>
   
   <label for="weather" class="form-item">
     Weather:
-    <input type="text" name="weather" value="{{weather}}">
+    <input type="text" name="weather" required>
   </label>
 
    <label for="vibes" class="form-item">
     Vibes:
-    <input type="text" name="vibes" value="{{vibes}}">
+    <input type="text" name="vibes" required>
   </label>
 
+  <div id="catches"></div>
+
+{{!-- 
 <label for="species" class="form-item">
     Species:
-    <input type="text" name="species" value="{{species}}">
+    <input type="text" name="species" required>
   </label>
 
   <label for="length" class="form-item">
     Length:
-    <input type="text" name="length" value="{{length}}">
+    <input type="text" name="length" required>
   </label>
 
   <label for="bait" class="form-item">
     Bait:
-    <input type="text" name="bait" value="{{bait}}">
+    <input type="text" name="bait" required>
   </label>
-  
-  <input type="hidden" name="image" value="{{image}}">
-  
-  <input type="submit" name="" value="Submit">
+   --}}
+
+  <button>Submit</button>
 </form>
 
+<button type="button" id="add-fish-button">another fish</button>
+
+<script>
+  console.log('loaded new-fish.js');
+
+const catches = document.getElementById('catches')
+
+function addNewFish() {
+  const newFish = document.createElement('div')
+
+  const speciesLabel = document.createElement('label')
+  speciesLabel.setAttribute('for', 'species')
+  speciesLabel.classList.add('form-item')
+  speciesLabel.innerHTML = 'Species:'
+
+  const lengthLabel = document.createElement('label')
+  lengthLabel.setAttribute('for', 'length')
+  lengthLabel.classList.add('form-item')
+  lengthLabel.innerHTML = 'Length:'
+
+  const baitLabel = document.createElement('label')
+  baitLabel.setAttribute('for', 'bait')
+  baitLabel.classList.add('form-item')
+  baitLabel.innerHTML = 'Bait:'
+
+  const speciesInput = document.createElement('input')
+  speciesInput.type = 'text'
+  speciesInput.name = 'species'
+  speciesInput.required = true
+
+  const lengthInput = document.createElement('input')
+  lengthInput.type = 'number'
+  lengthInput.name = 'length'
+  lengthInput.required = true
+
+  const baitInput = document.createElement('input')
+  baitInput.type = 'text'
+  baitInput.name = 'bait'
+  baitInput.required = true
+
+  // nesting all these new elements so theyll come together like a dom
+
+speciesLabel.appendChild(speciesInput)
+lengthLabel.appendChild(lengthInput)
+baitLabel.appendChild(baitInput)
+
+  newFish.appendChild(speciesLabel)
+  newFish.appendChild(lengthLabel)
+  newFish.appendChild(baitLabel)
+
+  catches.appendChild(newFish)
+
+}
+
+// start with one fish
+addNewFish()
+
+document.getElementById('add-fish-button').addEventListener('click', () => {
+  addNewFish()
+})
+
+</script>
