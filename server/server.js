@@ -1,5 +1,4 @@
 import * as Path from 'node:path'
-import fs from 'node:fs/promises'
 import express from 'express'
 import hbs from 'express-handlebars'
 

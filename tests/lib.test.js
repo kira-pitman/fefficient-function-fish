@@ -1,5 +1,5 @@
 import * as fs from 'node:fs/promises'
-import { expect, test, vi, describe, beforeAll } from 'vitest'
+import { expect, test, vi, beforeAll } from 'vitest'
 import * as Path from 'node:path/posix'
 
 import { getFishingTrips } from '../server/lib.js'

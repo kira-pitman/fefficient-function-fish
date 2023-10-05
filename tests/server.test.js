@@ -3,7 +3,6 @@ import { expect, test, vi, describe, beforeAll } from 'vitest'
 import request from 'supertest'
 
 import server from '../server/server.js'
-import { getFishingTrips } from '../server/lib.js'
 import { render } from './test-utils.js'
 
 vi.mock('node:fs/promises')
